@@ -60,7 +60,7 @@ class Command(BaseCommand):
             if logs_to_insert:
                 self._bulk_insert(logs_to_insert)
 
-        self.stdout.write(self.style.SUCCESS('Файл логов спрасен и сохранён!'))
+        self.stdout.write(self.style.SUCCESS('Файл логов спарсен и сохранён в БД!'))
 
     @transaction.atomic
     def _bulk_insert(self, logs):
